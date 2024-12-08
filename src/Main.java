@@ -23,9 +23,44 @@ public class Main {
 
             if (opcao == 7) {
                 continuar = false;
+                System.out.println("APLICAÇÃO ENCERRADA!!!");
                 System.out.println("Obrigado por usar o Conversor de Moeda. Até logo!");
                 break;
             }
+
+            String moedaOrigem = "";
+            String moedaDestino = "";
+            switch (opcao) {
+                case 1 -> {
+                    moedaOrigem = "USD";
+                    moedaDestino = "ARS";
+                }
+                case 2 -> {
+                    moedaOrigem = "ARS";
+                    moedaDestino = "USD";
+                }
+                case 3 -> {
+                    moedaOrigem = "USD";
+                    moedaDestino = "BRL";
+                }
+                case 4 -> {
+                    moedaOrigem = "BRL";
+                    moedaDestino = "USD";
+                }
+                case 5 -> {
+                    moedaOrigem = "USD";
+                    moedaDestino = "COP";
+                }
+                case 6 -> {
+                    moedaOrigem = "COP";
+                    moedaDestino = "USD";
+                }
+                default -> {
+                    System.out.println("Opção inválida. Tente novamente!");
+                    continue;
+                }
+            }
+
         }
     }
 }
