@@ -61,6 +61,17 @@ public class Main {
                 }
             }
 
+            System.out.print("Digite o valor a ser convertido: ");
+            double valor = scanner.nextDouble();
+            double taxa = BuscaMoeda.obterTaxa(moedaOrigem, moedaDestino);
+            double valorConvertido = valor * taxa;
+
+            System.out.printf("Taxa de conversão %s => %s: %.2f%n", moedaOrigem, moedaDestino, taxa);
+            System.out.printf("Valor convertido: %.2f %s%n", valorConvertido, moedaDestino);
+            System.out.println("****************************************************");
         }
+
+        scanner.close();
+
     }
 }
